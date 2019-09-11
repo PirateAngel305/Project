@@ -1,0 +1,102 @@
+[debug] [2019-07-30T07:14:53.108Z] ----------------------------------------------------------------------
+[debug] [2019-07-30T07:14:53.115Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shubham\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2019-07-30T07:14:53.116Z] CLI Version:   7.0.2
+[debug] [2019-07-30T07:14:53.116Z] Platform:      win32
+[debug] [2019-07-30T07:14:53.116Z] Node Version:  v12.4.0
+[debug] [2019-07-30T07:14:53.119Z] Time:          Tue Jul 30 2019 12:44:53 GMT+0530 (India Standard Time)
+[debug] [2019-07-30T07:14:53.119Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-07-30T07:14:53.154Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-07-30T07:14:53.157Z] > authorizing via signed-in user
+[debug] [2019-07-30T07:14:53.157Z] [iam] checking project react-redux-firebase-c16dc for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2019-07-30T07:14:53.163Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/react-redux-firebase-c16dc:testIamPermissions  
+
+[debug] [2019-07-30T07:14:55.407Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'react-redux-firebase-c16dc'...
+[info] 
+[info] i  deploying functions
+[debug] [2019-07-30T07:15:01.186Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.0.0",
+    "firebase-functions": "^3.0.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6"
+  },
+  "private": true
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2019-07-30T07:15:01.188Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudfunctions.googleapis.com/projectSettings/react-redux-firebase-c16dc?view=CONSUMER_VIEW  
+ 
+[debug] [2019-07-30T07:15:01.190Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/runtimeconfig.googleapis.com/projectSettings/react-redux-firebase-c16dc?view=CONSUMER_VIEW  
+ 
+[debug] [2019-07-30T07:15:03.996Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:04.272Z] <<< HTTP RESPONSE 200
+[info] +  functions: all necessary APIs are enabled
+[debug] [2019-07-30T07:15:04.275Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/react-redux-firebase-c16dc  
+ 
+[debug] [2019-07-30T07:15:06.245Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:06.246Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/640768633523:getServerAppConfig  
+ 
+[debug] [2019-07-30T07:15:06.864Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing functions directory for uploading...
+[debug] [2019-07-30T07:15:06.872Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/react-redux-firebase-c16dc/configs  
+ 
+[debug] [2019-07-30T07:15:08.790Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged functions (26.58 KB) for uploading
+[debug] [2019-07-30T07:15:09.246Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/react-redux-firebase-c16dc/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2019-07-30T07:15:10.445Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:10.447Z] >>> HTTP REQUEST PUT https://storage.googleapis.com/gcf-upload-us-central1-de1753c6-af43-4335-9524-046fd0f0ac02/5b5cc893-fbbc-471f-9923-6519c937ae14.zip?GoogleAccessId=service-640768633523@gcf-admin-robot.iam.gserviceaccount.com&Expires=1564472729&Signature=Xg%2FGKERt7ETy1lzZG3CKXkHpsKDUxgn0vQkBw6%2FvF4sPS4R8uYT7iYNNKqc7vC1lDc%2FVNqUPXw0ifSnm%2FHgOS%2FXN7%2F6rG28XDVcCQ9357I9qf%2BMnaEJFSP2oxWviJR4p02TSgpiNpt6tI0CV6HLc4v076kE%2FET0ypeSUuQTceCKU%2FIp0uCsgAmqWgPvzXd2Rh1%2FGNtgHA%2FkrM8FbzVbi8QevmWWu3Pqf%2Bco7mev6uClfufEB3y71Nt%2BjuwY%2B8ABDzaEinZWRMj1rPDAmIwZ2smCBpAND7O9Fu4X6QnjqUQNtJk0lLwf7tcg%2BGZ3os%2BPDp%2BY%2B7zc2aNCq2PystL6NKQ%3D%3D  
+
+[debug] [2019-07-30T07:15:11.925Z] <<< HTTP RESPONSE 200
+[info] +  functions: functions folder uploaded successfully
+[debug] [2019-07-30T07:15:11.933Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/projects/react-redux-firebase-c16dc/locations/-/functions  
+ 
+[debug] [2019-07-30T07:15:12.755Z] <<< HTTP RESPONSE 200
+[info] i  functions: creating Node.js 8 function addAdminRole(us-central1)...
+[debug] [2019-07-30T07:15:12.761Z] Trigger is:  {"eventTrigger":{"resource":"projects/react-redux-firebase-c16dc/databases/(default)/documents/admins","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: updating Node.js 8 function projectCreated(us-central1)...
+[debug] [2019-07-30T07:15:12.765Z] Trigger is:  {"eventTrigger":{"resource":"projects/react-redux-firebase-c16dc/databases/(default)/documents/projects/{projectId}","eventType":"providers/cloud.firestore/eventTypes/document.create","service":"firestore.googleapis.com"}}
+[info] i  functions: updating Node.js 8 function userJoined(us-central1)...
+[debug] [2019-07-30T07:15:12.767Z] Trigger is:  {"eventTrigger":{"resource":"projects/react-redux-firebase-c16dc","eventType":"providers/firebase.auth/eventTypes/user.create","service":"firebaseauth.googleapis.com"}}
+[debug] [2019-07-30T07:15:12.770Z] >>> HTTP REQUEST GET https://servicemanagement.googleapis.com/v1/services/cloudscheduler.googleapis.com/projectSettings/react-redux-firebase-c16dc?view=CONSUMER_VIEW  
+ 
+[debug] [2019-07-30T07:15:15.511Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:15.516Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/react-redux-firebase-c16dc/locations/us-central1/functions  
+
+[debug] [2019-07-30T07:15:15.518Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/react-redux-firebase-c16dc/locations/us-central1/functions/projectCreated {"updateMask":"sourceUploadUrl,name,labels,runtime,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+
+[debug] [2019-07-30T07:15:15.521Z] >>> HTTP REQUEST PATCH https://cloudfunctions.googleapis.com/v1/projects/react-redux-firebase-c16dc/locations/us-central1/functions/userJoined {"updateMask":"sourceUploadUrl,name,labels,runtime,eventTrigger.resource,eventTrigger.eventType,eventTrigger.service"} 
+
+[debug] [2019-07-30T07:15:16.469Z] <<< HTTP RESPONSE 400
+[debug] [2019-07-30T07:15:16.470Z] <<< HTTP RESPONSE BODY
+[warn] !  functions: failed to create function addAdminRole
+[info] HTTP Error: 400, The request has errors
+[debug] [2019-07-30T07:15:16.638Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:16.640Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:16.642Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/cmVhY3QtcmVkdXgtZmlyZWJhc2UtYzE2ZGMvdXMtY2VudHJhbDEvcHJvamVjdENyZWF0ZWQvYllRLWlHUjI5dk0  
+ 
+[debug] [2019-07-30T07:15:16.643Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/cmVhY3QtcmVkdXgtZmlyZWJhc2UtYzE2ZGMvdXMtY2VudHJhbDEvdXNlckpvaW5lZC9FSTR4RXlYWHZCZw  
+ 
+[debug] [2019-07-30T07:15:17.430Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:17.463Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:19.436Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/cmVhY3QtcmVkdXgtZmlyZWJhc2UtYzE2ZGMvdXMtY2VudHJhbDEvdXNlckpvaW5lZC9FSTR4RXlYWHZCZw  
+ 
+[debug] [2019-07-30T07:15:19.467Z] >>> HTTP REQUEST GET https://cloudfunctions.googleapis.com/v1/operations/cmVhY3QtcmVkdXgtZmlyZWJhc2UtYzE2ZGMvdXMtY2VudHJhbDEvcHJvamVjdENyZWF0ZWQvYllRLWlHUjI5dk0  
+ 
+[debug] [2019-07-30T07:15:20.310Z] <<< HTTP RESPONSE 200
+[debug] [2019-07-30T07:15:20.313Z] <<< HTTP RESPONSE 200
